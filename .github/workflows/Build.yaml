@@ -75,7 +75,7 @@ jobs:
     - name: Archive mac results
       uses: actions/upload-artifact@v3
       with:
-        name: macBuild
+        name: macBuild_${{matrix.conf}}
         path: ${{github.workspace}}/build
 
   linux-premake:
@@ -228,5 +228,5 @@ jobs:
     - name: Archive windows results
       uses: actions/upload-artifact@v3
       with:
-        name: windowsBuild
+        name: windowsBuild_${{matrix.conf}}
         path: ${{github.workspace}}/build
